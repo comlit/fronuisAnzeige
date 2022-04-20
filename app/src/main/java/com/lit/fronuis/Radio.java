@@ -36,7 +36,7 @@ import java.util.regex.Pattern;
  *
  * DLF Nova: https://st03.sslstream.dlf.de/dlf/03/128/mp3/stream.mp3
  * https://onlineradiobox.com/de/dradiowissen
- * https://www.deutschlandfunknova.de/actions/dradio/playlist/onair
+ * https://static.deutschlandfunknova.de/actions/dradio/playlist/onair
  *
  * WDR 5: https://wdr-wdr5-live.icecastssl.wdr.de/wdr/wdr5/live/mp3/128/stream.mp3
  * https://onlineradiobox.com/de/wdr5/
