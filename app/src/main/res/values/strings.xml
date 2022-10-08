@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">fronuis</string>
+    <string name="customGraph_exampleString">fronuis</string>
 </resources>

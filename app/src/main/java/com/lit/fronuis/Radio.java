@@ -94,6 +94,8 @@ public class Radio extends AppCompatActivity {
         tWlist.add(tWdlfNova);
         tWlist.add(tWwdr5);
         tWlist.add(tWantenne);
+        for(TextView tw: tWlist)
+            tw.setSelected(true);
         createThread();
         for (Button btn: btnList) {
             btn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_round_play_arrow_24,0,0,0);

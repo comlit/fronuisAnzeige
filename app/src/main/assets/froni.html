@@ -1,0 +1,361 @@
+<html>
+
+<body>
+<energy-flow class="ng-star-inserted">
+    <energy-container-wrapper controlname="energyFlow" class="ng-star-inserted">
+        <div class="energy-flow-outer-container">
+            <div style="width: 100%; height: 100%; position: relative; min-width: 100px;"><svg width="100%"
+                                                                                               height="100%" viewBox="0 0 400 400">
+                <g width="400" height="400" transform="translate(0, 0) scale(1,1)">
+                    <path d="M108.2842712474619,108.2842712474619L171.7157287525381,171.7157287525381"
+                          id="pvPath" stroke="#eeeeee" stroke-width="1"></path>
+                    <path d="M108.2842712474619,291.7157287525381L171.7157287525381,228.2842712474619"
+                          id="gridPath" stroke="#eeeeee" stroke-width="1"></path>
+                    <path d="M291.7157287525381,108.2842712474619L228.2842712474619,171.7157287525381"
+                          id="consumerPath" stroke="#eeeeee" stroke-width="1"></path>
+                    <path d="M291.7157287525381,291.7157287525381L228.2842712474619,228.2842712474619"
+                          id="battPath" stroke="#eeeeee" stroke-width="1"></path>
+                    <circle r="2.0693136700154433"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(171.71572875976562,171.71572875976562)"></circle>
+                    <circle r="2.066607359689554"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(171.71572875976562,171.71572875976562)"></circle>
+                    <circle r="7.71624477122994"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(255.60208129882812,144.39791870117188)"></circle>
+                    <circle r="2.066607359689554"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(171.71572875976562,171.71572875976562)"></circle>
+                    <circle r="7.847322419271994"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(228.28427124023438,228.28427124023438)"></circle>
+                    <circle r="2.0693136700154433"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(136.45489501953125,136.45489501953125)"></circle>
+                    <circle r="2.0693136700154433"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(116.80522918701172,116.80522918701172)"></circle>
+                    <circle r="7.71624477122994"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(291.7157287597656,108.28427124023438)"></circle>
+                    <circle r="2.1016056694915664"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(171.71572875976562,171.71572875976562)"></circle>
+                    <circle r="2.0693136700154433"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(155.8649139404297,155.8649139404297)"></circle>
+                    <circle r="7.847322419271994"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(265.5749206542969,265.5749206542969)"></circle>
+                    <circle r="2.066607359689554"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(171.71572875976562,171.71572875976562)"></circle>
+                    <circle r="7.71624477122994"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(275.2799377441406,124.7200698852539)"></circle>
+                    <circle r="7.847322419271994"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(245.91116333007812,245.91116333007812)"></circle>
+                    <circle r="7.71624477122994"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(235.94891357421875,164.05108642578125)"></circle>
+                    <circle r="7.847322419271994"
+                            style="stroke-width: 1; stroke: rgb(255, 255, 255); fill: rgb(135, 151, 180);"
+                            transform="translate(285.2421875,285.2421875)"></circle>
+                    <g id="pvContainer" transform="translate(-120, -120) scale(1,1)" style="cursor: pointer;">
+                        <circle id="pvOuterCircle" cx="200" cy="200" r="58.642857142857146" fill-opacity="1"
+                                fill="#ffffff" stroke-width="1" stroke="#dbe0e8"></circle>
+                        <circle cx="200" cy="200" r="40" id="pvCircle" fill="#ffffff" stroke-width="1"
+                                stroke="#dbe0e8"></circle>
+                        <image x="173.33333333333334" y="173.33333333333334" id="pvImage"
+                               xlink:href="http://192.168.178.58/solarWeb/assets/old/pv.svg?v=1637609365488" width="53.333333333333336"
+                               height="53.333333333333336"></image>
+                        <image x="195" y="195" id="pvErrorImage"
+                               xlink:href="http://192.168.178.58/solarWeb/assets/old/pv.svg?v=1637609365488" width="40"
+                               height="40" display="none"></image>
+                        <g id="pvGroup" transform="translate(200,200) rotate(0)">
+                            <path id="pvIndicatorPath"
+                                  d="M3.4989908547067235e-15,-57.142857142857146A57.142857142857146,57.142857142857146,0,1,1,-57.142857142857146,6.997981709413447e-15L-42,5.143516556418883e-15A42,42,0,1,0,2.5717582782094417e-15,-42Z"
+                                  style="fill: rgb(219, 224, 232);"></path>
+                            <path id="pvTextPath"
+                                  d="M-57.142857142857146,6.997981709413447e-15A57.142857142857146,57.142857142857146,0,0,1,-1.049697256412017e-14,-57.142857142857146L-8.082668874372531e-15,-44A44,44,0,0,0,-44,5.3884459162483544e-15Z"
+                                  style="fill: white;"></path><text dy="13"
+                                                                    style="font-size: 14px; font-family: sans-serif; text-anchor: middle; fill: rgb(127, 132, 136); letter-spacing: 1px;">
+                            <textPath id="pvText" xlink:href="#pvTextPath" startOffset="25%">11 W</textPath>
+                        </text>
+                            <path visibility="visible" id="pvIndicator"
+                                  d="M3.4989908547067235e-15,-57.142857142857146A57.142857142857146,57.142857142857146,0,0,1,0.7068760108003268,-57.138484830754265L0.5195538679382401,-41.99678635060438A42,42,0,0,0,2.5717582782094417e-15,-42Z"
+                                  style="fill: rgb(135, 151, 180);"></path>
+                            <path visibility="hidden" id="pvOverflow"
+                                  d="M1,0L1,15.142857142857146L7.557049485796465,7.571428571428573L1,0"
+                                  transform="translate(-57.142857142857146,0) rotate(-90)"
+                                  style="fill: rgb(135, 151, 180);"></path>
+                            <line x1="20.999999999999996" y1="-36.373066958946424" x2="28.57142857142857"
+                                  y2="-49.487165930539355" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="36.373066958946424" y1="-21.000000000000004" x2="49.48716593053935"
+                                  y2="-28.57142857142858" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="42" y1="-2.5717582782094417e-15" x2="57.142857142857146"
+                                  y2="-3.4989908547067235e-15"
+                                  style="stroke: rgb(255, 255, 255); stroke-width: 1;"></line>
+                            <line x1="40.56888470414087" y1="10.870399894305876" x2="55.19576150223248"
+                                  y2="14.78965972014405" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="36.373066958946424" y1="20.99999999999999" x2="49.487165930539355"
+                                  y2="28.57142857142856" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="29.698484809834998" y1="29.698484809834994" x2="40.406101782088435"
+                                  y2="40.40610178208843" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="20.999999999999996" y1="36.373066958946424" x2="28.57142857142857"
+                                  y2="49.487165930539355" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="10.870399894305883" y1="40.568884704140864" x2="14.789659720144058"
+                                  y2="55.19576150223247" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="5.143516556418883e-15" y1="42" x2="6.997981709413447e-15"
+                                  y2="57.142857142857146" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-7.293223462011079" y1="41.361925626512736" x2="-9.922753009538885"
+                                  y2="56.274728743554746" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-14.364846019678083" y1="39.46709007300815" x2="-19.54400819003821"
+                                  y2="53.6967211877662" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-21.000000000000004" y1="36.373066958946424" x2="-28.57142857142858"
+                                  y2="49.48716593053935" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-26.99707960683465" y1="32.17386661099708" x2="-36.730720553516534"
+                                  y2="43.77396817822732" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-32.173866610997074" y1="26.997079606834657" x2="-43.773968178227314"
+                                  y2="36.73072055351654" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-36.37306695894642" y1="21.000000000000018" x2="-49.48716593053935"
+                                  y2="28.571428571428598" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-39.46709007300815" y1="14.36484601967808" x2="-53.6967211877662"
+                                  y2="19.544008190038205" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-41.361925626512736" y1="7.293223462011074" x2="-56.274728743554746"
+                                  y2="9.922753009538877" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                        </g>
+                    </g>
+                    <g id="gridContainer" transform="translate(-120, 120) scale(1,1)" style="cursor: pointer;">
+                        <circle id="gridOuterCircle" cx="200" cy="200" r="58.642857142857146" fill-opacity="1"
+                                fill="#ffffff" stroke-width="1" stroke="#eeeeee"></circle>
+                        <circle cx="200" cy="200" r="40" id="gridCircle" fill="#ffffff" stroke-width="1"
+                                stroke="#eeeeee"></circle>
+                        <image x="173.33333333333334" y="173.33333333333334" id="gridImage"
+                               xlink:href="http://192.168.178.58/solarWeb/assets/old/grid.svg?v=1637609365488" width="53.333333333333336"
+                               height="53.333333333333336"></image>
+                        <image x="195" y="195" id="gridErrorImage"
+                               xlink:href="http://192.168.178.58/solarWeb/assets/old/grid.svg?v=1637609365488" width="40"
+                               height="40" display="none"></image>
+                        <g id="gridGroup" transform="translate(200,200) rotate(0)">
+                            <path id="gridTextPath"
+                                  d="M-57.142857142857146,6.997981709413447e-15A57.142857142857146,57.142857142857146,0,0,1,-1.049697256412017e-14,-57.142857142857146L-8.082668874372531e-15,-44A44,44,0,0,0,-44,5.3884459162483544e-15Z"
+                                  style="fill: white;"></path><text dy="13"
+                                                                    style="font-size: 14px; font-family: sans-serif; text-anchor: middle; fill: rgb(127, 132, 136); letter-spacing: 1px;">
+                            <textPath id="gridText" xlink:href="#gridTextPath" startOffset="25%">12 W
+                            </textPath>
+                        </text>
+                        </g>
+                    </g>
+                    <g id="consumerContainer" transform="translate(120, -120) scale(1,1)"
+                       style="cursor: pointer;">
+                        <circle id="consumerOuterCircle" cx="200" cy="200" r="58.642857142857146"
+                                fill-opacity="1" fill="#ffffff" stroke-width="1" stroke="#eeeeee"></circle>
+                        <circle cx="200" cy="200" r="40" id="consumerCircle" fill="#ffffff" stroke-width="1"
+                                stroke="#eeeeee"></circle>
+                        <image x="173.33333333333334" y="173.33333333333334" id="consumerImage"
+                               xlink:href="http://192.168.178.58/solarWeb/assets/old/consumption.svg?v=1637609365488"
+                               width="53.333333333333336" height="53.333333333333336"></image>
+                        <image x="195" y="195" id="consumerErrorImage"
+                               xlink:href="http://192.168.178.58/solarWeb/assets/old/consumption.svg?v=1637609365488" width="40"
+                               height="40" display="none"></image>
+                        <g id="consumerGroup" transform="translate(200,200) rotate(0)">
+                            <path id="consumerIndicatorPath"
+                                  d="M3.4989908547067235e-15,-57.142857142857146A57.142857142857146,57.142857142857146,0,1,1,-57.142857142857146,6.997981709413447e-15L-42,5.143516556418883e-15A42,42,0,1,0,2.5717582782094417e-15,-42Z"
+                                  style="fill: rgb(238, 238, 238);"></path>
+                            <path id="consumerTextPath"
+                                  d="M-57.142857142857146,6.997981709413447e-15A57.142857142857146,57.142857142857146,0,0,1,-1.049697256412017e-14,-57.142857142857146L-8.082668874372531e-15,-44A44,44,0,0,0,-44,5.3884459162483544e-15Z"
+                                  style="fill: white;"></path><text dy="13"
+                                                                    style="font-size: 14px; font-family: sans-serif; text-anchor: middle; fill: rgb(127, 132, 136); letter-spacing: 1px;">
+                            <textPath id="consumerText" xlink:href="#consumerTextPath" startOffset="25%">452
+                                W</textPath>
+                        </text>
+                            <path visibility="visible" id="consumerIndicator"
+                                  d="M3.4989908547067235e-15,-57.142857142857146A57.142857142857146,57.142857142857146,0,0,1,26.792886153313244,-50.472243600067706L19.692771322685232,-37.09709904604976A42,42,0,0,0,2.5717582782094417e-15,-42Z"
+                                  style="fill: rgb(127, 132, 136);"></path>
+                            <path visibility="hidden" id="consumerOverflow"
+                                  d="M1,0L1,15.142857142857146L7.557049485796465,7.571428571428573L1,0"
+                                  transform="translate(-57.142857142857146,0) rotate(-90)"
+                                  style="fill: rgb(127, 132, 136);"></path>
+                        </g>
+                    </g>
+                    <g id="ohmpilotContainer" transform="translate(120, -120) scale(1,1)"
+                       style="cursor: pointer;">
+                        <g id="ohmpilotGroup" transform="translate(200,200) rotate(0)">
+                            <path visibility="visible" id="ohmpilotIndicator"
+                                  d="M26.792886153313244,-50.472243600067706L19.692771322685232,-37.09709904604976Z"
+                                  style="fill: rgb(198, 199, 200);"></path>
+                            <line x1="20.999999999999996" y1="-36.373066958946424" x2="28.57142857142857"
+                                  y2="-49.487165930539355" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="36.373066958946424" y1="-21.000000000000004" x2="49.48716593053935"
+                                  y2="-28.57142857142858" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="42" y1="-2.5717582782094417e-15" x2="57.142857142857146"
+                                  y2="-3.4989908547067235e-15"
+                                  style="stroke: rgb(255, 255, 255); stroke-width: 1;"></line>
+                            <line x1="40.56888470414087" y1="10.870399894305876" x2="55.19576150223248"
+                                  y2="14.78965972014405" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="36.373066958946424" y1="20.99999999999999" x2="49.487165930539355"
+                                  y2="28.57142857142856" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="29.698484809834998" y1="29.698484809834994" x2="40.406101782088435"
+                                  y2="40.40610178208843" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="20.999999999999996" y1="36.373066958946424" x2="28.57142857142857"
+                                  y2="49.487165930539355" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="10.870399894305883" y1="40.568884704140864" x2="14.789659720144058"
+                                  y2="55.19576150223247" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="5.143516556418883e-15" y1="42" x2="6.997981709413447e-15"
+                                  y2="57.142857142857146" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-7.293223462011079" y1="41.361925626512736" x2="-9.922753009538885"
+                                  y2="56.274728743554746" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-14.364846019678083" y1="39.46709007300815" x2="-19.54400819003821"
+                                  y2="53.6967211877662" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-21.000000000000004" y1="36.373066958946424" x2="-28.57142857142858"
+                                  y2="49.48716593053935" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-26.99707960683465" y1="32.17386661099708" x2="-36.730720553516534"
+                                  y2="43.77396817822732" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-32.173866610997074" y1="26.997079606834657" x2="-43.773968178227314"
+                                  y2="36.73072055351654" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-36.37306695894642" y1="21.000000000000018" x2="-49.48716593053935"
+                                  y2="28.571428571428598" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-39.46709007300815" y1="14.36484601967808" x2="-53.6967211877662"
+                                  y2="19.544008190038205" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-41.361925626512736" y1="7.293223462011074" x2="-56.274728743554746"
+                                  y2="9.922753009538877" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                        </g>
+                    </g>
+                    <g id="battContainer" transform="translate(120, 120) scale(1,1)" style="cursor: pointer;">
+                        <circle id="battOuterCircle" cx="200" cy="200" r="58.642857142857146" fill-opacity="1"
+                                fill="#ffffff" stroke-width="1" stroke="#ffe6b2"></circle>
+                        <circle cx="200" cy="200" r="40" id="battCircle" fill="#ffffff" stroke-width="1"
+                                stroke="#ffe6b2" style="stroke-width: 1; stroke: rgb(255, 230, 178);"></circle>
+                        <image x="173.33333333333334" y="173.33333333333334" id="battImage"
+                               xlink:href="http://192.168.178.58/solarWeb/assets/old/battery_25.svg?v=1637609365488"
+                               width="53.333333333333336" height="53.333333333333336"></image>
+                        <image x="195" y="195" id="battErrorImage"
+                               xlink:href="http://192.168.178.58/solarWeb/assets/old/battery_25.svg?v=1637609365488" width="40"
+                               height="40" display="none"></image>
+                        <g id="battGroup" transform="translate(200,200) rotate(0)">
+                            <path id="battIndicatorPath"
+                                  d="M3.4989908547067235e-15,-57.142857142857146A57.142857142857146,57.142857142857146,0,1,1,-57.142857142857146,6.997981709413447e-15L-42,5.143516556418883e-15A42,42,0,1,0,2.5717582782094417e-15,-42Z"
+                                  style="fill: rgb(255, 230, 178);"></path>
+                            <path id="battTextPath"
+                                  d="M-57.142857142857146,6.997981709413447e-15A57.142857142857146,57.142857142857146,0,0,1,-1.049697256412017e-14,-57.142857142857146L-8.082668874372531e-15,-44A44,44,0,0,0,-44,5.3884459162483544e-15Z"
+                                  style="fill: white;"></path><text dy="13"
+                                                                    style="font-size: 14px; font-family: sans-serif; text-anchor: middle; fill: rgb(127, 132, 136); letter-spacing: 1px;">
+                            <textPath id="battText" xlink:href="#battTextPath" startOffset="25%">8 %
+                            </textPath>
+                        </text>
+                            <path visibility="visible" id="battIndicator"
+                                  d="M3.4989908547067235e-15,-57.142857142857146A57.142857142857146,57.142857142857146,0,0,1,21.784670529665664,-52.827400583058186L16.011732839304265,-38.828139428547765A42,42,0,0,0,2.5717582782094417e-15,-42Z"
+                                  style="fill: rgb(254, 173, 0);"></path>
+                            <path visibility="hidden" id="battOverflow"
+                                  d="M1,0L1,15.142857142857146L7.557049485796465,7.571428571428573L1,0"
+                                  transform="translate(-57.142857142857146,0) rotate(-90)"
+                                  style="fill: rgb(254, 173, 0);"></path>
+                            <line x1="19.067600989060963" y1="-37.422274015911455" x2="25.942314270831243"
+                                  y2="-50.914658525049596" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="33.97871376374779" y1="-24.68698059628387" x2="46.22954253571128"
+                                  y2="-33.587728702427036" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="41.482910304995784" y1="-6.570247531689699" x2="56.43933374829359"
+                                  y2="-8.939112288013197" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="39.94437368439645" y1="12.978713763747788" x2="54.34608664543735"
+                                  y2="17.658113964282705" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="29.698484809834998" y1="29.698484809834994" x2="40.406101782088435"
+                                  y2="40.40610178208843" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="12.978713763747795" y1="39.944373684396446" x2="17.658113964282716"
+                                  y2="54.346086645437346" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-6.570247531689691" y1="41.482910304995784" x2="-8.939112288013185"
+                                  y2="56.43933374829359" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-24.686980596283867" y1="33.97871376374779" x2="-33.58772870242703"
+                                  y2="46.22954253571128" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                            <line x1="-37.42227401591145" y1="19.06760098906097" x2="-50.91465852504959"
+                                  y2="25.942314270831254" style="stroke: rgb(255, 255, 255); stroke-width: 1;">
+                            </line>
+                        </g>
+                    </g>
+                    <g id="inverterContainer" transform="" style="cursor: pointer;">
+                        <circle id="inverterOuterCircle" cx="200" cy="200" r="58.642857142857146"
+                                fill-opacity="1" fill="#ffffff" stroke-width="1" stroke="#eeeeee"></circle>
+                        <circle cx="200" cy="200" r="40" id="inverterCircle" fill="#ffffff" stroke-width="1"
+                                stroke="#eeeeee"></circle>
+                        <image x="173.33333333333334" y="173.33333333333334" id="inverterImage"
+                               xlink:href="http://192.168.178.58/solarWeb/assets/old/inverter_gen24.svg?v=1637609365488"
+                               width="53.333333333333336" height="53.333333333333336"></image>
+                        <image x="195" y="195" id="inverterErrorImage"
+                               xlink:href="http://192.168.178.58/solarWeb/assets/old/inverter_gen24.svg?v=1637609365488" width="40"
+                               height="40" display="none"></image>
+                    </g>
+                    <g>
+                        <defs>
+                            <mask id="mask">
+                                <rect fill="#ffffff" x="0" y="0" width="400" height="400"></rect>
+                                <circle r="57.142857142857146" cx="320" cy="320"></circle>
+                            </mask>
+                        </defs>
+                        <rect width="600" height="600" x="-100" y="-100" fill-opacity="0" mask="url(#mask)"
+                              visibility="hidden"></rect>
+                    </g>
+                </g>
+            </svg>
+                <div class="js-status-bar-bg"
+                     style="visibility: hidden; opacity: 0; width: 100%; height: 35%; position: absolute; bottom: 0px; display: table; background-color: rgb(255, 255, 255); border-top: 2px solid rgb(238, 238, 238);">
+                    <div class="js-status-bar-text"
+                         style="font-size: 33px; font-family: sans-serif; padding: 13px; display: table-cell; text-align: center; vertical-align: middle; color: rgb(75, 77, 77);">
+                        Die Batterie wird mit <span style="white-space: nowrap"><b>519 W</b></span> entladen und der
+                        Ladestand beträgt <span style="white-space: nowrap"><b>9 %</b></span>.</div>
+                </div>
+                <div class="power-component-details-overlay"
+                     style="background-color: white; height: 0px; width: 0px; opacity: 0; overflow-y: auto; position: absolute; top: 0px; left: 0px;">
+                </div>
+            </div>
+        </div>
+    </energy-container-wrapper>
+    <!---->
+    <!---->
+    <!---->
+</energy-flow>
+
+</body>
+
+</html>

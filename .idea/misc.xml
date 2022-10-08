@@ -4,14 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.57421875" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_battery_0.xml" value="0.3425" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_battery_100.xml" value="0.3425" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_battery_50.xml" value="0.3425" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_battery_charging_100.xml" value="0.3425" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_battery_charging_25.xml" value="0.3675" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_battery_charging_50.xml" value="0.3425" />
         <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_launcher_background.xml" value="0.57421875" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_pv.xml" value="0.271" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_round_arrow_right_alt_24.xml" value="0.271" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_round_horizontal_rule_24.xml" value="0.271" />
         <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_round_pause_24.xml" value="0.57421875" />
         <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_round_play_arrow_24.xml" value="0.57421875" />
         <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/ic_round_swap_horiz_24.xml" value="0.3828125" />
         <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/drawable/rectagle.xml" value="0.367" />
         <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/layout/activity_radio.xml" value="0.25" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/layout/activity_radio.xml" value="0.5" />
         <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/layout/rectagle.xml" value="0.55" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/layout/sample_custom_graph.xml" value="0.52890625" />
+        <entry key="..\:/Users/Fabian/AndroidStudioProjects/fronuisAnzeige/app/src/main/res/layout/sample_power_comp.xml" value="0.1" />
+        <entry key="..\:/Users/Fabian/AppData/Local/Android/Sdk/platforms/android-30/data/res/drawable/progress_horizontal.xml" value="0.271" />
       </map>
     </option>
   </component>

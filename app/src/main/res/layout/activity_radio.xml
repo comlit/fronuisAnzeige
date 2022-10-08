@@ -11,14 +11,13 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="1dp" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingRight="10dp"
+            android:paddingHorizontal="10dp">
 
             <Space
                 android:layout_width="0dp"
@@ -28,8 +27,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:background="@drawable/rectagle"
+                android:orientation="horizontal"
                 android:paddingLeft="5dp">
 
                 <Button
@@ -37,16 +36,23 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="WDR 2"
-                    android:drawableLeft="@drawable/ic_round_play_arrow_24" />
+                    android:drawableLeft="@drawable/ic_round_play_arrow_24"
+                    android:text="WDR 2" />
 
                 <TextView
+                    android:id="@+id/dlfNova"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Keine Info"
-                    android:id="@+id/dlfNova"
                     android:padding="10dp"
-                    android:textColor="@color/purple_700"/>
+                    android:text="Keine Info"
+                    android:textColor="@color/purple_700"
+                    android:maxWidth="365dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"/>
 
             </LinearLayout>
 
@@ -58,8 +64,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:background="@drawable/rectagle"
+                android:orientation="horizontal"
                 android:paddingLeft="5dp">
 
                 <Button
@@ -67,16 +73,23 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1Live"
-                    android:drawableLeft="@drawable/ic_round_play_arrow_24" />
+                    android:drawableLeft="@drawable/ic_round_play_arrow_24"
+                    android:text="1Live" />
 
                 <TextView
+                    android:id="@+id/dlf2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Keine Info"
-                    android:id="@+id/dlf2"
                     android:padding="10dp"
-                    android:textColor="@color/purple_700"/>
+                    android:text="Keine Info"
+                    android:textColor="@color/purple_700"
+                    android:maxWidth="365dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"/>
 
             </LinearLayout>
 
@@ -88,8 +101,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:background="@drawable/rectagle"
+                android:orientation="horizontal"
                 android:paddingLeft="5dp">
 
                 <Button
@@ -97,16 +110,23 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="WDR 5"
-                    android:drawableLeft="@drawable/ic_round_play_arrow_24" />
+                    android:drawableLeft="@drawable/ic_round_play_arrow_24"
+                    android:text="WDR 5" />
 
                 <TextView
+                    android:id="@+id/dlf3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Keine Info"
-                    android:id="@+id/dlf3"
                     android:padding="10dp"
-                    android:textColor="@color/purple_700"/>
+                    android:text="Keine Info"
+                    android:textColor="@color/purple_700"
+                    android:maxWidth="365dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"/>
 
             </LinearLayout>
 
@@ -118,8 +138,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:background="@drawable/rectagle"
+                android:orientation="horizontal"
                 android:paddingLeft="5dp">
 
                 <Button
@@ -127,16 +147,24 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="DLF Nova"
-                    android:drawableLeft="@drawable/ic_round_play_arrow_24" />
+                    android:drawableLeft="@drawable/ic_round_play_arrow_24"
+                    android:maxHeight="48dp"
+                    android:text="DLF Nova" />
 
                 <TextView
+                    android:text="Keine Info"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit ="marquee_forever"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollHorizontally="true"
+                    android:id="@+id/dlf4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Keine Info"
-                    android:id="@+id/dlf4"
+                    android:maxWidth="365dp"
                     android:padding="10dp"
-                    android:textColor="@color/purple_700"/>
+                    android:textColor="@color/purple_700" />
 
             </LinearLayout>
 
@@ -148,8 +176,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:background="@drawable/rectagle"
+                android:orientation="horizontal"
                 android:paddingLeft="5dp">
 
                 <Button
@@ -157,16 +185,23 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Antenne Münster"
-                    android:drawableLeft="@drawable/ic_round_play_arrow_24" />
+                    android:drawableLeft="@drawable/ic_round_play_arrow_24"
+                    android:text="Antenne Münster" />
 
                 <TextView
+                    android:id="@+id/dlf5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Keine Info"
-                    android:id="@+id/dlf5"
                     android:padding="10dp"
-                    android:textColor="@color/purple_700"/>
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Keine Info"
+                    android:textColor="@color/purple_700"
+                    android:maxWidth="290dp"/>
 
             </LinearLayout>
 
@@ -177,17 +212,21 @@
 
         </LinearLayout>
 
+
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="start|bottom"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start|bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:src="@drawable/ic_round_swap_horiz_24"
-        android:layout_margin="16dp"
         app:backgroundTint="#B1AACF" />
 
 </RelativeLayout>
