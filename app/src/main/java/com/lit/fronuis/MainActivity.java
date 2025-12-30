@@ -14,18 +14,27 @@ import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.data.Entry;
+import com.google.android.exoplayer2.ExoPlayer;
+import com.google.android.exoplayer2.MediaItem;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -44,7 +53,20 @@ public class MainActivity extends AppCompatActivity
     ArrayList<Integer> congraph, pvgraph;
     int maxgraph = 1;
     ImageView battic;
-    CustomGraph custom;
+    ExoPlayer player;
+    Button playbutton, nextbutton;
+    int current = 0;
+    TextView currentRadio, songInfo;
+
+    String[] songinfo;
+
+    //scrapeshit,
+    Handler radioHandler = new Handler();
+    Runnable radioRunnable;
+    int delay = 5*1000;
+    Thread scrape;
+
+    int hour = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -77,7 +99,6 @@ public class MainActivity extends AppCompatActivity
         tvBatt = findViewById(R.id.tVbatt);
 
         battic = findViewById(R.id.battIcon);
-        custom = findViewById(R.id.graph);
 
         webWeather.getSettings().setJavaScriptEnabled(true);
         webWeather.setWebViewClient(new WebViewClient());
@@ -94,48 +115,64 @@ public class MainActivity extends AppCompatActivity
         //webView.loadUrl("file:///android_asset/froni.html");
         handler = new Handler();
         api = new APIHelper();
+        songinfo = new String[5];
+        initPlayer();
+    }
 
-        //graphing
-
-        //snakeViewPV = findViewById(R.id.snake);
-        //snakeViewPV.setMinValue(0);
-
-        //snakeViewCONS = findViewById(R.id.snake2);
-        //snakeViewCONS.setMinValue(0);
-
-        //snakeViewPV.setMaximumNumberOfValues(300);
-        //snakeViewCONS.setMaximumNumberOfValues(300);
-
-        //get from shared
-
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
-        String pvString = sharedPref.getString("pv123", "100,110,120,130,140,150,160,");
-        String consString = sharedPref.getString("cons123", "130,150,180,130,100,80,130,");
-
-        pvgraph = new ArrayList<>();
-        congraph = new ArrayList<>();
-
-        String[] pvArr = pvString.split(",");
-        for(String x: pvArr)
-            pvgraph.add(Integer.parseInt(x));
-        String[] consArr = consString.split(",");
-        for(String x: consArr)
-            congraph.add(Integer.parseInt(x));
-
-        //System.out.println("PV: " + pvgraph.toString() + "Cons: " + congraph.toString());
-
-
-        //LineChart chart = (LineChart) findViewById(R.id.chart);
-        List<Entry> entries = new ArrayList<Entry>();
-        int cou = 0;
-        for(int i: pvgraph)
+    public void initPlayer()
+    {
+        playbutton = findViewById(R.id.playbutton);
+        nextbutton = findViewById(R.id.nextbutton);
+        currentRadio = findViewById(R.id.currentRadio);
+        songInfo = findViewById(R.id.songInfo);
+        player = new ExoPlayer.Builder(MainActivity.this).build();
+        // Build the media item.
+        MediaItem[] mediaItems = new MediaItem[5];
+        mediaItems[0] = MediaItem.fromUri("https://wdr-wdr2-muensterland.icecastssl.wdr.de/wdr/wdr2/muensterland/mp3/128/stream.mp3");
+        mediaItems[1] = MediaItem.fromUri("https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3");
+        mediaItems[2] = MediaItem.fromUri("https://st03.sslstream.dlf.de/dlf/03/128/mp3/stream.mp3");
+        mediaItems[3] = MediaItem.fromUri("https://wdr-wdr5-live.icecastssl.wdr.de/wdr/wdr5/live/mp3/128/stream.mp3");
+        mediaItems[4] = MediaItem.fromUri("https://antennemuenster--di--nacs-ais-lgc--06--cdn.cast.addradio.de/antennemuenster/live/mp3/high");
+        String[] names = new String[5];
+        names[0] = "WDR2";
+        names[1] = "1Live";
+        names[2] = "DLF Nova";
+        names[3] = "WDR5";
+        names[4] = "Antenne Münster";
+        // Set the media item to be played.
+        player.setMediaItem(mediaItems[0]);
+        // Prepare the player.
+        player.prepare();
+        playbutton.setOnClickListener(new View.OnClickListener()
         {
-            entries.add(new Entry(cou,i));
-            cou++;
-        }
-
-
-        custom.init(pvgraph, congraph);
+            @Override
+            public void onClick(View view)
+            {
+                if(player.isPlaying())
+                    player.pause();
+                else
+                {
+                    player.seekForward();
+                    player.play();
+                }
+            }
+        });
+        nextbutton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                if(current == 4)
+                    current = 0;
+                else
+                    current++;
+                player.setMediaItem(mediaItems[current]);
+                currentRadio.setText(names[current]);
+                songInfo.setText(songinfo[current]);
+                player.prepare();
+                player.play();
+            }
+        });
     }
 
     public void startHandler()
@@ -160,7 +197,6 @@ public class MainActivity extends AppCompatActivity
                     cons.getLayoutParams().width = (int)((Math.atan((Math.abs(Double.parseDouble(data.get("cons")))-1000.0)/1000.0)*146.5+115.5)*(barlength/346.0));
                     cons.requestLayout();
 
-                    custom.change((int) Math.abs(Double.parseDouble(data.get("cons"))));
 
                     // Batt and grid bars
                     double battval = Double.parseDouble(data.get("battuse"));
@@ -264,24 +300,6 @@ public class MainActivity extends AppCompatActivity
                     //8,4 kw peak
 
                     //TODO: proper graphing / background worker for data collection
-
-                    //graphing
-
-                    //System.out.println("PV: " + pvgraph.toString() + "Cons: " + congraph.toString() + "Max: " + maxgraph);
-
-                    int pv = Math.abs((int) Math.abs(Double.parseDouble(data.get("prod"))));
-                    int cons = Math.abs((int) Math.abs(Double.parseDouble(data.get("cons"))));
-
-                    congraph.add(cons);
-                    if(congraph.size()>3000)
-                        congraph.remove(0);
-
-                    pvgraph.add(pv);
-                    if(pvgraph.size()>3000)
-                        pvgraph.remove(0);
-
-
-                    //custom.init(pvgraph, congraph);
                 }
 
                 //webView.scrollBy(0, 205);
@@ -342,6 +360,7 @@ public class MainActivity extends AppCompatActivity
         super.onResume();
         webWeather.reload();
         startHandler();
+        startRadioHandler();
 
         //setContentView(webView);
         //hideSystemUI();
@@ -354,24 +373,76 @@ public class MainActivity extends AppCompatActivity
         String conString = "";
         String pvString = "";
 
-        for(Integer i: pvgraph)
-            pvString = pvString + i + ",";
-        for(Integer j: congraph)
-            conString = conString + j + ",";
-
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("cons123", conString);
         editor.putString("pv123", pvString);
         editor.apply();
+        stopHandler();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        player.release();
     }
 
     public static float convertDpToPixel(float dp, Context context){
         return dp * ((float) context.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT);
     }
+
+    public void startRadioHandler()
+    {
+        radioHandler.postDelayed( radioRunnable = new Runnable() {
+            public void run() {
+                createRadioThread();
+                if(songinfo != null)
+                    songInfo.setText(songinfo[current]);
+                radioHandler.postDelayed(radioRunnable, delay);
+
+                //refresh weather widget
+                hour++;
+                if(hour >= 2160) {
+                    hour = 0;
+                    webWeather.loadUrl("file:///android_asset/weather.html");
+                }
+            }
+        }, delay);
+    }
+
+    public void stopRadioHandler()
+    {
+        radioHandler.removeCallbacks(radioRunnable);
+    }
+
+    public void createRadioThread()
+    {
+        scrape = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                try  {
+                    songinfo[0] = getName("https://onlineradiobox.com/de/wdr2/");
+                    songinfo[1] = getName("https://onlineradiobox.com/de/einslive/");
+                    songinfo[2] = getName("https://onlineradiobox.com/de/dradiowissen");
+                    songinfo[3] = getName("https://onlineradiobox.com/de/wdr5/");
+                    songinfo[4] = getName("https://onlineradiobox.com/de/antennemuenster/");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        scrape.start();
+    }
+
+    public String getName(String url) throws IOException
+    {
+        String info = "";
+        Document doc = Jsoup.connect(url).get();
+        Elements tab = doc.getElementsByClass("tablelist-schedule");
+        info = tab.get(0).text().substring(8);
+        String[] list = Pattern.compile("([0-1][0-9]|[2][0-3]):([0-5][0-9])").split(info);
+        return list[0];
+    }
+
 }

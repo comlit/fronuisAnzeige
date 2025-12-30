@@ -12,14 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fronuis"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:name="androidx.multidex.MultiDexApplication">
         <activity
             android:name=".Radio"
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -22,7 +22,7 @@ public class APIHelper
     public Map<String, String> getData()
     {
         Request request = new Request.Builder()
-                .url("http://192.168.178.58/status/powerflow")
+                .url("http://192.168.178.58/api/status/powerflow")
                 .build();
         try (Response response = client.newCall(request).execute()) {
             JSONObject jo = new JSONObject(response.body().string());
